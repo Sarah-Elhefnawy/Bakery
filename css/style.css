@@ -3,40 +3,60 @@
     padding: 0px;
     /* font-size: 15px; */
     font-family: "Alegreya", serif;
-}
-/* .padding {
-    padding-right: 100px;
-    padding-left: 100px;
-    background: transparent;
-} */
-/* nav {
-    width: 100%; 
-    height: 80px;
-    font-size: 15px;
-} */
-/* nav img{
-    font-size: 15px;
-    font-weight: 400px;
-    width: 175px;
-    margin-left: 200px;
-    margin-top: 15px;
-} */
-/* nav a {
-    position: relative;
-    top: 50%;
-    left: 10%;
     text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+.container {
+    width: 65%;
+    margin: auto;
+}
+#navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.logo {
+    float: left;
+}
+.logo img {
+    width: 50%;
+    padding-top: 20px;
+}
+.menu{
+    float: right;
+}
+.menu ul {
+    margin-top: 15px;
+}
+.menu li {
+    display: inline;
+    padding-inline: 20px;
+    /*paddong inline right and left padding  */
+    /*paddong block top and bottom padding  */
     font-size: 20px;
-    font-family: sans-serif;
-    text-transform: capitalize;
-    color: black;
-    transition: 0.3s;
-} */
+    color: white;
+}
+.menu li a {
+    color: white;
+}
 
 /* <!-- Start of header --> */
+.layer {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.padding {
+    padding-top: 300px;
+}
 #header {
     text-transform: capitalize;
-    height: 300px;
+    height: 100vh;
     background-image: url("../images/header.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -44,13 +64,13 @@
     text-align: center;
     color: aliceblue;
     padding-top: 250px;
-    padding-bottom: 250px;
+    padding-bottom: 300px;
 }
 #header p {
     font-size: 24px !important;
     margin-top: 10px;
     font-family: "Alegreya Sans", sans-serif;
-    font-weight: 400px;
+    font-weight: 400;
     padding-top: 0px;
     padding-bottom: 20px;
 }
@@ -58,60 +78,61 @@
     font-size: 76px;
     line-height: 80px;
     padding-bottom: 20px;
-    /* font-weight: 400px; */
+    font-weight: 400;
 }
 button {
     color: aliceblue;
     background: none;
     padding: 20px;
     font-size: 16px;
-    font-weight: 700px;
+    font-weight: 700;
     border-radius: 5px;
-    border-color: aliceblue;
+    border-color: #735E36;
     cursor: pointer;
     line-height: 1.3rem;
     margin-top: 20px;
+    width: 130px;
+    font-size: 17px;
 }
 .color {
     background-color: #735E36;
-    border-color: #735E36;
+    border-color: white;
 }
-/* .overlay {
-    display: block !important;
-    background: rgba(0, 0, 0, 0.40);
-    content: "";
+/* button:hover .demo {
+
 } */
-/* .bg-overlay:before {
-    background: rgba(0, 0, 0, 0.40);
-    content: "";
-} */
+button:hover {
+   background-color: white;
+   color: black; 
+   transition: 0.5s all;
+}
 /* <!-- End of header --> */
 
 /* <!-- Start of who are we --> */
+#who {
+    padding-bottom: 50px;
+}
 .image-left {
 width: 50%;
 float: left;
 }
 .image-left img {
-    width: 60%;
+    width: 90%;
     text-align: center;
-    padding-top: 90px;
-    padding-left: 300px;
-    padding-bottom: 90px;
+    padding-top: 100px;
 }
 .text-right {
 width: 50%;
 text-align: left;
 line-height: 1.7rem;
 float: left;
-padding: 20px 30px 100px 50px;
-box-sizing: border-box;
+padding: 30px 30px 0px 0;
 color: #766F68 !important;
 
 }
 h2 {
     font-size: 32px;
-    font-weight: 400px;
+    font-weight: 400;
     padding-top: 120px;
     color: #303030;
     padding-bottom: 30px;
@@ -119,7 +140,7 @@ h2 {
 }
 p {
     font-size: 17px !important;
-    font-weight: 400px;
+    font-weight: 400;
     /* padding-top: 20px; */
     padding-bottom: 30px;
 }
@@ -139,14 +160,14 @@ ul {
 /* <!-- Start of location --> */
 #location {
     background-color: #F8F8F8;
+    padding-bottom: 50px;
 }
 .text-left {
     width: 50%;
     text-align: left;
-    line-height: 30px;
     color: #766F68;
     float: left;
-    padding: 0px 50px 60px 300px;
+    padding: 30px 40px 0 0 ;
     box-sizing: border-box;
     line-height: 1.7rem;
 }
@@ -155,25 +176,27 @@ ul {
     float: left;
 }
 .image-right img {
-    width: 60%;
+    width: 95%;
     text-align: center;
     /* padding-top: 90px;
     padding-right: 250px;
     padding-bottom: 90px; */
-    padding: 90px 250px 90px 40px;
+    padding: 90px 0px 0px 40px;
 }
 /* <!-- End of location --> */
 /* <!-- Start of our baking --> */
 #baking {
     text-align: center;
-    width: 70%;
     margin: auto;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
+}
+#baking h4 {
+    color: #303030;
 }
 .title {
     color: #303030;
     font-size: 30px;
-    /* font-weight: 400px; */
+    font-weight: 400;
     padding-top: 100px;
     padding-bottom: 50px;
 }
@@ -184,6 +207,9 @@ h3 {
     width: 33.3%;
     float: left;
 }
+.demo p {
+    color: #303030;
+}
 .demo img {
     width: 350px;
     padding-bottom: 30px;
@@ -193,21 +219,21 @@ h3 {
 /* <!-- Start of contact info --> */
 #contact-info {
     background-color: #F8F8F8;
+    padding-bottom: 50px;
+}
+.text-left-contact {
+    width: 50%;
+    text-align: left;
+    color: #766F68;
+    float: left;
 }
 iframe {
     padding-top: 100px;
     padding-left: 30px;
 }
-iframe:focus {
-    outline: none;
-}
-iframe[seamless] {
-    display: block;
-}
 .image-right {
     font-family: Roboto, sans-serif;
     border:none;
-    vertical-align:baseline
 }
 /* <!-- End of contact info --> */
 
@@ -218,7 +244,7 @@ iframe[seamless] {
 }
 .footer-section {
     padding: 60px 0px 50px 0;
-    width: 70%;
+    /* width: 70%; */
     margin: auto;
     box-sizing: border-box;
 }
@@ -235,24 +261,32 @@ iframe[seamless] {
     float:left;
     width: 25%;
 }
-h4 {
+.footer-section h4 {
     font-size: 18px;
     line-height: 24.84px;
-    font-weight: 400px;
+    font-weight: 400;
     color: #FFFFFF;
     padding-bottom: 30px;
     
 }
 .footer-contact {
-    /* width: 80px; */
     background-image: url('../images/contact-details-map.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    /* opacity: 0.11; */
     float: left;
     width: 25%;
 }
+.layer-contact {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+}
+/* .fcontact {
+    z-index: 2;
+} */
 
 /* <!-- End of footer main --> */
 
@@ -260,7 +294,7 @@ h4 {
 #footer-bottom {
     background-color: #353330;
     text-align: center;
-
+    padding-top: 50px;
 }
 .footer-logo {
     max-width: 100%;
@@ -287,4 +321,4 @@ h4 {
     /* overflow: hidden; */
     /* position: relative; */
 }
-/* <!-- Start of footer --> */
+/* <!-- End of footer --> */
